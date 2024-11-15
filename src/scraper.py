@@ -5,7 +5,7 @@ from urllib.parse import urljoin
 import fitz  
 
 def create_db():
-    conn = sqlite3.connect('scraped_data.db')
+    conn = sqlite3.connect('data/scraped_data.db')
     c = conn.cursor()
     c.execute('''
         CREATE TABLE IF NOT EXISTS web_pages (
@@ -19,7 +19,7 @@ def create_db():
     conn.close()
 
 def insert_data(url, content, content_type):
-    conn = sqlite3.connect('scraped_data.db')
+    conn = sqlite3.connect('data/scraped_data.db')
     c = conn.cursor()
     c.execute('''
         INSERT OR REPLACE INTO web_pages (url, content, content_type)
