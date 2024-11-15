@@ -1,10 +1,4 @@
 import os
 from dotenv import load_dotenv
-from embedchain import App
-import streamlit as st
+from config import config
 
-load_dotenv()
-
-HUGGINGFACE_ACCESS_TOKEN = os.getenv("HUGGINGFACE_ACCESS_TOKEN")
-
-app = App()

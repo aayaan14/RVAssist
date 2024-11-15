@@ -1,3 +1,5 @@
 python-dotenv
 streamlit
-embedchain
+requests
+beautifulsoup4
+pymupdf
