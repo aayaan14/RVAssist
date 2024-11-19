@@ -4,7 +4,7 @@ from indexing import indexer, build_and_save_index
 
 # Sidebar information
 with st.sidebar:
-    st.title("EL-DEMO")
+    st.title("RV-ASSIST")
     st.subheader("Aayaan Hasnain 1RV21AI001")
     st.subheader("Akshay Alva 1RV21AI007")  
 
@@ -18,15 +18,28 @@ if "messages" not in st.session_state:
             "role": "assistant",
             "content": """
             Hello professors! I'm a model chatbot. I can answer anything you want to know about RVCE.
-            Currently, my knowledge base is built from structured data like PDFs and SQLite databases.
+            Currently, my knowledge base is built from structured data like HTML files, PDFs.
             """,
         }
     ]
+
+if "show_map" not in st.session_state:
+    st.session_state.show_map = False  # Initialize map visibility state
 
 # Display chat history
 for message in st.session_state.messages:
     with st.chat_message(message["role"]):
         st.markdown(message["content"])
+
+# Add a button to toggle the map display
+if st.button("Toggle Map"):
+    st.session_state.show_map = not st.session_state.show_map  # Toggle the map state
+
+# Display the map if the state is True
+if st.session_state.show_map:
+    with open("src/map.html", "r") as f:
+        map_html = f.read()
+    st.components.v1.html(map_html, width=1000, height=600)
 
 # Prompt input
 if prompt := st.chat_input("Ask me anything!"):
@@ -48,16 +61,3 @@ if prompt := st.chat_input("Ask me anything!"):
             error_msg = f"An error occurred: {e}"
             msg_placeholder.markdown(error_msg)
             st.session_state.messages.append({"role": "assistant", "content": error_msg})
-
-# Button to rebuild the index
-if st.button("Rebuild Index"):
-    try:
-        build_and_save_index()
-        st.success("Index rebuilt successfully!")
-    except Exception as e:
-        st.error(f"Failed to rebuild index: {e}")
-
-# Button to show the college map
-map_url = "http://127.0.0.1:5500/map.html"
-if st.button("Show College Map"):
-    st.components.v1.iframe(map_url, width=900, height=700)
