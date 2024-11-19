@@ -1,0 +1,196 @@
+{
+  "professors": [
+    {
+      "name": "Dr. Sathish Babu",
+      "image_url": "https://rvce.edu.in/sites/default/files/bsb-passport-photo.jpg",
+      "department": "AIML",
+      "designation": "HoD",
+      "research_interests": "Computer Networks Security, HPC, Cloud Computing, Artificial Intelligence, Quantum Computing",
+      "link": "https://rvce.edu.in/aiml-bsbabu"
+    },
+    {
+      "name": "Dr. Vijayalakshmi",
+      "image_url": "http://www.rvce.edu.in/sites/default/files/mca-mnv_0.jpg",
+      "department": "AIML",
+      "designation": "Associate Professor",
+      "research_interests": "Data Mining and Image Processing,Soft Computing",
+      "link": "https://rvce.edu.in/aiml-faculty-mnv"
+    },
+    {
+      "name": "Mr. Narasimha Swamy",
+      "image_url": "https://rvce.edu.in/sites/default/files/NS_0.jpg",
+      "department": "AIML",
+      "designation": "Assistant Professor",
+      "research_interests": "Artificial Intelligence, Internet of Things, Edge Computing/Intelligence",
+      "link": "https://rvce.edu.in/aiml-faculty-ns"
+    },
+    {
+      "name": "Dr S Anupama Kumar",
+      "image_url": "https://rvce.edu.in/sites/default/files/mca-sak.jpg",
+      "department": "AIML",
+      "designation": "Assosiate Professor",
+      "research_interests": "Data Mining",
+      "link": "https://rvce.edu.in/mca-faculty-sak"
+    },
+    {
+      "name": "Prof. Somesh Nandi",
+      "image_url": "https://rvce.edu.in/sites/default/files/somesh.jpg",
+      "department": "AIML",
+      "designation": "Assistant Professor",
+      "research_interests": "Integrated Photonics, OptoElectronics",
+      "link": "https://rvce.edu.in/aiml-somesh"
+    },
+    {
+      "name": "Prof. Rajesh M",
+      "image_url": "https://rvce.edu.in/sites/default/files/Rajesh%20Passport%20Size%20photo%20with%20Blazer_0.jpg",
+      "department": "AIML",
+      "designation": "Assistant Professor",
+      "research_interests": "Artificial Intelligence & Cyber Security",
+      "link": "https://rvce.edu.in/aiml-faculty-rajesh"
+    },
+    {
+      "name": "Prof. Priya",
+      "image_url": "https://rvce.edu.in/sites/default/files/AIML-Faculty-Priya.jpg",
+      "department": "AIML",
+      "designation": "Assistant Professor",
+      "research_interests": "Artificial Intelligence, Automata Theory",
+      "link": "https://rvce.edu.in/aiml-faculty-priya"
+    },
+    {
+      "name": "Dr. Jaya Sharma",
+      "image_url": "https://rvce.edu.in/sites/default/files/faculty-aiml-jayasharma.jpg",
+      "department": "AIML",
+      "designation": "Assistant Professor",
+      "research_interests": "Surveillance Video Analytics, Aerial Imagery,Remote Sensing Image Analysis",
+      "link": "https://rvce.edu.in/aiml-faculty-Jayasharma"
+    },
+    {
+      "name": "Prof Sonika CT",
+      "image_url": "https://rvce.edu.in/sites/default/files/image%283%29.png",
+      "department": "AIML",
+      "designation": "Assistant Professor",
+      "research_interests": "Artificial Intelligence and Networking",
+      "link": "https://rvce.edu.in/aiml-faculty-Sonika"
+    },
+    {
+      "designation": "HoD",
+      "department": "CS",
+      "research_interests": "CyberSec",
+      "link": "https://rvce.edu.in/ise-rmp-it",
+      "name": "Dr. Ramakanth Kumar",
+      "image_url": "https://rvce.edu.in/sites/default/files/cse_Dr.Ramakanthkumar_p.jpg"
+    },
+    {
+      "designation": "Associate Professor",
+      "department": "CS",
+      "research_interests": "Computer Security and Privacy, Data Engineering, Education Technology",
+      "link": "http://www.rvce.edu.in/cs-soumyarani",
+      "name": "Dr. Sowmyarani",
+      "image_url": "https://www.rvce.edu.in/sites/default/files/Soumyarani.jpg"
+    },
+    {
+      "designation": "Associate Professor",
+      "department": "CS",
+      "research_interests": "N/A",
+      "link": "http://rvce.edu.in/cs-hemavathy",
+      "name": "Dr. Hemavathy",
+      "image_url": "http://www.rvce.edu.in/sites/default/files/cse_hr.jpg"
+    },
+    {
+      "designation": "Associate Professor",
+      "department": "CS",
+      "research_interests": "N/A",
+      "link": "http://rvce.edu.in/cs-Badrinath-new",
+      "name": "Badari Nath",
+      "image_url": "https://rvce.edu.in/sites/default/files/cse_KB_0.jpg"
+    },
+    {
+      "designation": "Assistant Professor",
+      "department": "CS",
+      "research_interests": "N/A",
+      "link": "http://rvce.edu.in/cs-pratiba",
+      "name": "Pratiba D",
+      "image_url": "data:image/jpeg;base64,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"
+    },
+    {
+      "designation": "Assistant Professor",
+      "department": "CS",
+      "research_interests": "N/A",
+      "link": "http://rvce.edu.in/cs-jyoti",
+      "name": "Jyoti Shetty",
+      "image_url": "https://rvce.edu.in/sites/default/files/cse%20Jyoti.jpeg"
+    },
+    {
+      "designation": "Assistant Professor",
+      "department": "CS",
+      "research_interests": "N/A",
+      "link": "http://rvce.edu.in/cs-praveena",
+      "name": "Dr. Praveena T",
+      "image_url": "https://rvce.edu.in/sites/default/files/Praveena_Photo.jpg"
+    },
+    {
+      "designation": "Assistant Professor",
+      "department": "CS",
+      "research_interests": "N/A",
+      "link": "http://rvce.edu.in/cs-vishalakshi",
+      "name": "Vishalakshi Prabhu H",
+      "image_url": "https://rvce.edu.in/sites/default/files/vish_0.jpg"
+    },
+    {
+      "designation": "Assistant Professor",
+      "department": "CS",
+      "research_interests": "N/A",
+      "link": "http://www.rvce.edu.in/cs-suma",
+      "name": "Dr. Suma B",
+      "image_url": "https://rvce.edu.in/sites/default/files/suma.jpg"
+    },
+    {
+      "designation": "Assistant Professor",
+      "department": "CS",
+      "research_interests": "N/A",
+      "link": "http://www.rvce.edu.in/cs-manonmani",
+      "name": "Prof. Manonmani S",
+      "image_url": "https://rvce.edu.in/sites/default/files/MS-PHOTO2.jpg"
+    },
+    {
+      "designation": "Assistant Professor",
+      "department": "CS",
+      "research_interests": "N/A",
+      "link": "http://www.rvce.edu.in/cs-smriti",
+      "name": "Prof. Smriti Srivastava",
+      "image_url": "https://rvce.edu.in/sites/default/files/SMriti%20Srivastava_Profile%20Pic.jpg"
+    },
+    {
+      "designation": "Assistant Professor",
+      "department": "CS",
+      "research_interests": "N/A",
+      "link": "http://www.rvce.edu.in/cs-veena",
+      "name": "Dr. Veena Gadad",
+      "image_url": "https://www.rvce.edu.in/sites/default/files/LIC.jpg"
+    },
+    {
+      "designation": "Assistant Professor",
+      "department": "CS",
+      "research_interests": "N/A",
+      "link": "http://www.rvce.edu.in/cse-anitha-sandeep",
+      "name": "Prof. Anitha Sandeep",
+      "image_url": "https://www.rvce.edu.in/sites/default/files/cse_anithasandeep.jpeg.jpg"
+    },
+    {
+      "designation": "Assistant Professor",
+      "department": "CS",
+      "research_interests": "N/A",
+      "link": "https://rvce.edu.in/cs-rajatha",
+      "name": "Prof. Rajatha",
+      "image_url": "https://rvce.edu.in/sites/default/files/cse%20Rajatha.jpg"
+    },
+    {
+      "designation": "Assistant Professor",
+      "department": "CS",
+      "research_interests": "N/A",
+      "link": "http://rvce.edu.in/cse-faculty-Savitri-Kulkarni",
+      "name": "Prof. Savitri Kulkarni",
+      "image_url": "https://rvce.edu.in/sites/default/files/cse%20SavitriKulkarni_1.jpg"
+    }
+  ]
+}

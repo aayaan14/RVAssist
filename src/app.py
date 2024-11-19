@@ -1,6 +1,30 @@
 import os
 import streamlit as st
 from indexing import indexer, build_and_save_index
+import json
+
+# Load professor profiles from JSON file
+with open("data/profile.json") as f:
+    profiles = json.load(f)
+
+def get_professor_profile(query):
+    query = query.lower()
+    for professor in profiles["professors"]:
+        full_name = professor["name"].lower()
+        designations = ["dr.", "prof.", "mr.", "mrs.", "ms."]
+        actual_name = full_name
+        for designation in designations:
+            actual_name = actual_name.replace(designation, "").strip()
+        if actual_name in query:
+            return professor
+    return None
+
+def render_html_template(template_path, context):
+    with open(template_path, "r") as file:
+        template = file.read()
+    for key, value in context.items():
+        template = template.replace(f"{{{{ {key} }}}}", value)
+    return template
 
 # Sidebar information
 with st.sidebar:
@@ -12,6 +36,7 @@ with st.sidebar:
 st.title("💬 RVChat")
 st.caption("🚀 LLM used for demo: Llama 3.2:1b")
 
+# Initialize session states
 if "messages" not in st.session_state:
     st.session_state.messages = [
         {
@@ -37,12 +62,35 @@ if st.button("Toggle Map"):
 
 # Display the map if the state is True
 if st.session_state.show_map:
-    with open("src/map.html", "r") as f:
+    with open("templates/map.html", "r") as f:
         map_html = f.read()
     st.components.v1.html(map_html, width=1000, height=600)
 
 # Prompt input
 if prompt := st.chat_input("Ask me anything!"):
+    professor_profile = get_professor_profile(prompt)
+    if professor_profile:
+        with st.chat_message("user"):
+            st.markdown(prompt)  # Display the user's input
+            st.session_state.messages.append({"role": "user", "content": prompt})
+
+        with st.chat_message("assistant"):
+            context = {
+                "name": professor_profile["name"],
+                "image_url": professor_profile["image_url"],
+                "department": professor_profile["department"],
+                "designation": professor_profile["designation"],
+                "research_interests": professor_profile["research_interests"],
+                "link": professor_profile["link"],
+            }
+            profile_html = render_html_template("templates/professor_profile.html", context)
+            st.components.v1.html(profile_html, height=800)
+            st.session_state.messages.append({"role": "assistant", "content": "Professor profile displayed."})
+
+        # Exit early to prevent forwarding to LLM
+        exit()
+
+    # If no professor is found, proceed with LLM query
     with st.chat_message("user"):
         st.markdown(prompt)
         st.session_state.messages.append({"role": "user", "content": prompt})

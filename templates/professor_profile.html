@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        
+        .dark-mode {
+            background-color: #121212;
+            color: #E0E0E0;
+        }
+
+        .light-mode {
+            background-color: #FFFFFF;
+            color: #333333;
+        }
+
+        .profile-container {
+            background-color: #1E1E1E;
+            border: 2px solid #3A3A3A;
+            border-radius: 12px;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            transition: background-color 0.3s, border 0.3s;
+        }
+
+        .profile-container img {
+            border-radius: 8px;
+            max-width: 200px;
+            height: auto;
+            margin-bottom: 20px;
+            border: 4px solid #3A3A3A;
+        }
+
+        .profile-container h2 {
+            color: #00A9E1;
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+
+        .profile-container h3 {
+            color: #FF6F61;
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+        }
+
+        .profile-container p {
+            font-size: 1rem;
+            margin: 5px 0;
+        }
+
+        .profile-container a {
+            color: #1E90FF;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .profile-container a:hover {
+            text-decoration: underline;
+            color: #56B3E3;
+        }
+
+        .profile-container strong {
+            color: #F1F1F1;
+        }
+
+        .toggle-btn {
+            background-color: #00A9E1;
+            color: #FFFFFF;
+            padding: 10px 20px;
+            font-size: 1rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background-color 0.3s;
+        }
+
+        .toggle-btn:hover {
+            background-color: #007B8C;
+        }
+    </style>
+</head>
+<body class="dark-mode">
+    <button class="toggle-btn" onclick="toggleMode()">Change Mode</button>
+    <div class="profile-container">
+        <h2>Professor Profile</h2>
+        <div>
+            <img src="{{ image_url }}" alt="{{ name }}">
+        </div>
+        <h3>{{ name }}</h3>
+        <p><strong>Department:</strong> {{ department }}</p>
+        <p><strong>Designation:</strong> {{ designation }}</p>
+        <p><strong>Research Interests:</strong> {{ research_interests }}</p>
+        <p><strong>Further Info:</strong> <a href="{{ link }}" target="_blank">{{ link }}</a></p>
+    </div>
+
+    <script>
+        function toggleMode() {
+            const body = document.body;
+            const profileContainer = document.querySelector('.profile-container');
+
+            // Toggle between dark and light mode
+            if (body.classList.contains('dark-mode')) {
+                body.classList.remove('dark-mode');
+                body.classList.add('light-mode');
+                profileContainer.style.backgroundColor = '#FFFFFF';
+                profileContainer.style.border = '2px solid #DDDDDD';
+            } else {
+                body.classList.remove('light-mode');
+                body.classList.add('dark-mode');
+                profileContainer.style.backgroundColor = '#1E1E1E';
+                profileContainer.style.border = '2px solid #3A3A3A';
+            }
+        }
+    </script>
+</body>
+</html>
