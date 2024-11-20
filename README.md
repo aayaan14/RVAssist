@@ -1,6 +1,6 @@
 # **RVAssist**
 
-A **Streamlit-based chatbot app** designed to assist users with information about **Rashtreeya Vidyalaya College of Engineering (RVCE)**. The app includes a **Google Maps-powered campus navigation feature** to guide users to various locations on the campus.
+A **Streamlit-based chatbot app** designed to assist users with information about **Rashtreeya Vidyalaya College of Engineering (RVCE)**. The app also includes a **Google Maps-powered campus navigation feature** to guide users to various locations on the campus.
 
 ---
 
