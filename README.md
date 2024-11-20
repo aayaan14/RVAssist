@@ -55,7 +55,7 @@ pip install -r requirements.txt
 
 ### **4. Set Up Database**
 ```bash
-python create_db.py
+python src/create_db.py
 ```
 
 ### **5. Set Up Google Maps API Key**
@@ -83,5 +83,5 @@ python create_db.py
 
 ### **7. Run the App**
 ```bash
-streamlit run app.py
+streamlit run src/app.py
 ```
