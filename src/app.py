@@ -33,7 +33,7 @@ with st.sidebar:
     st.subheader("Akshay Alva 1RV21AI007")  
 
 # Title and introductory text
-st.title("💬 RVChat")
+st.title("💬 RV-Assist")
 st.caption("🚀 LLM used for demo: Llama 3.2:1b")
 
 # Initialize session states

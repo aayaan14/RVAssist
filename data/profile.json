@@ -10,7 +10,7 @@
     },
     {
       "name": "Dr. Vijayalakshmi",
-      "image_url": "http://www.rvce.edu.in/sites/default/files/mca-mnv_0.jpg",
+      "image_url": "https://www.rvce.edu.in//sites/default/files/mca-mnv_0.jpg",
       "department": "AIML",
       "designation": "Associate Professor",
       "research_interests": "Data Mining and Image Processing,Soft Computing",
@@ -33,7 +33,7 @@
       "link": "https://rvce.edu.in/mca-faculty-sak"
     },
     {
-      "name": "Prof. Somesh Nandi",
+      "name": "Dr. Somesh Nandi",
       "image_url": "https://rvce.edu.in/sites/default/files/somesh.jpg",
       "department": "AIML",
       "designation": "Assistant Professor",
